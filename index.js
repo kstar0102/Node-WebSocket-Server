@@ -19,6 +19,7 @@ wss.on('connection', function connection(ws) {
     ws.send('connected');
     ws.on('close', function () {
         // Remove the closed client connection from the set
-        clients.delete(ws);        
+        console.log('Unconnected');
+        clients.delete(ws);
     })
 });
